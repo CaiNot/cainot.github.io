@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>HexoConfigure</title>
+    <url>/2020/04/13/HexoConfigure/</url>
+    <content><![CDATA[<h1 id="hexo-配置记录">Hexo 配置记录</h1>
+<p>个人的 Hexo 配置记录</p>
+<a id="more"></a>
+<h2 id="基本信息配置">基本信息配置</h2>
+<p>在安装了<code>nmp</code> <code>hexo</code>后创建工作目录:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo init &lt;floder&gt;</span><br><span class="line">cd &lt;floder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>以上命令初始化了工作目录.</p>
+<p>在工作目录下有文件<code>_config.yml</code>, 设置基本信息, 如我的个人信息是:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">CaiNot's</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">Learner</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">""</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Cai</span> <span class="string">Not</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span></span><br></pre></td></tr></table></figure>
+<p>为了上传到<code>github</code> 需要再配置发布信息:(git 功能需要插件支持)</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/&lt;User&gt;/&lt;repo&gt;</span></span><br></pre></td></tr></table></figure>
+<p>利用<code>hexo clean</code>来清理生成的文件 <code>hexo g</code>生成静态文件 <code>hexo d</code>发布文件 <code>hexo g -d</code> 来生成并发布文件</p>
+<h2 id="基本插件设置">基本插件设置</h2>
+<h3 id="git">git</h3>
+<p>安装用于支持<code>git</code>的插件:<code>npm install hexo-deployer-git --save</code></p>
+<h3 id="搜索">搜索</h3>
+<p>安装用于支持搜索的插件<code>npm install hexo-generator-searchdb</code> 在 hexo 配置中添加:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br></pre></td></tr></table></figure>
+<p>然后<code>hexo clean &amp;&amp; hexo g -d</code></p>
+<h3 id="主题">主题</h3>
+<p>安装<code>next</code>主题:在工作目录下执行<code>git clone https://github.com/theme-next/hexo-theme-next themes/next</code> 将 hexo 的配置信息中的主题改为 next, 如下:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>configure</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/04/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -17,6 +48,6 @@
 <h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]>    </content>
+]]></content>
   </entry>
 </search>
