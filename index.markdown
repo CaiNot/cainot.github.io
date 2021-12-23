@@ -11,7 +11,7 @@ My research focuses on Database Management System and Machine Learning for Datab
 
 ## Education Information
 
-- Sep 2016 - Now. Ph.D, Wuhan National Laboratory for Optoelectronics, Huazhong University of Science and Technology, Wuhan, China.
+- Sep 2020 - Now. Ph.D, Wuhan National Laboratory for Optoelectronics, Huazhong University of Science and Technology, Wuhan, China.
 - Sep 2016 - Jun 2020. B.S., Computer of Science of Technology, Huazhong University of Science and Technology, Wuhan, China.
 
 ## Publication
