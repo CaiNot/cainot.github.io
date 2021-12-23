@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"cainot.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":"search","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Graduate Work [TOC] Description 这是我个人的关于毕业设计的实现过程的简要描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GraduateWork">
+<meta property="og:url" content="https://cainot.github.io/2020/04/13/GraduateWork/index.html">
+<meta property="og:site_name" content="CaiNot&#39;s Blog">
+<meta property="og:description" content="Graduate Work [TOC] Description 这是我个人的关于毕业设计的实现过程的简要描述">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-13T07:09:23.000Z">
+<meta property="article:modified_time" content="2020-04-13T07:27:47.542Z">
+<meta property="article:author" content="Cai Not">
+<meta property="article:tag" content="note">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://cainot.github.io/2020/04/13/GraduateWork/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>GraduateWork | CaiNot's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">CaiNot's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Learner</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cainot.github.io/2020/04/13/GraduateWork/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Cai Not">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CaiNot's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          GraduateWork
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-13 15:09:23 / 修改时间：15:27:47" itemprop="dateCreated datePublished" datetime="2020-04-13T15:09:23+08:00">2020-04-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/work/" itemprop="url" rel="index"><span itemprop="name">work</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="graduate-work">Graduate Work</h1>
+<p>[TOC]</p>
+<h2 id="description">Description</h2>
+<p>这是我个人的关于毕业设计的实现过程的简要描述</p>
+<a id="more"></a>
+<h2 id="todo-list">Todo List</h2>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+前期调研</li>
+<li><input type="checkbox" disabled="" checked="" />
+论文阅读</li>
+<li><input type="checkbox" disabled="" checked="" />
+框架设定</li>
+<li><input type="checkbox" disabled="" checked="" />
+代码阅读</li>
+<li><input type="checkbox" disabled="" />
+代码修改</li>
+<li><input type="checkbox" disabled="" />
+代码测试</li>
+</ul>
+<h2 id="timeline">Timeline</h2>
+<h3 id="section">2020/3/25</h3>
+<p>需要修改的地方包括</p>
+<ol type="1">
+<li>事务没有孩子时：<span class="math inline">\(f(t_i)=0\)</span></li>
+<li>事务有孩子时：<span class="math inline">\(f(t_i)=\sum_{t_j\in \xi(t_i)}[f(t_j)+\theta_2 age+\theta_3 lock_num]\)</span></li>
+<li>事务被释放时，对于每一个正在运行且未被阻塞的事务来说<span class="math inline">\(f\)</span>需要被更新</li>
+</ol>
+<p>任务安排：</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+事务进入等待队列时，对其进行赋值</li>
+<li><input type="checkbox" disabled="" />
+事务释放后，需要重新把锁分配给对象，需要计算</li>
+</ul>
+<h3 id="section-1">2020/3/27</h3>
+<p>编写测试脚本，该脚本的主要目的是确保数据库的连接数目&gt;32（这是触发 CATS 算法的最小值） 简单的想法就是，两个变量控制，<code>-S -X</code>分别控制 S 锁的线程数和 X 锁的线程数，用最简单的<code>for update</code>来上<code>X</code>锁</p>
+<p>经过测试发现，用 shell 脚本很难控制，主要是不好主动在中途退出数据库，于是采用 python 来实现。</p>
+<h2 id="questions-and-answers">Questions and Answers</h2>
+<h3 id="无法-ping-通任何域名提示name-or-service-not-known">无法 ping 通任何域名，提示<code>Name or service not known</code>；</h3>
+<p>直接 ping ip 地址，依然不通，系统内未安装<code>net-tools</code>，无法联网下载<code>ifconfig</code>等工具。</p>
+<ol type="1">
+<li>使用 systemctl restart network 或 service network restart 命令重启网卡失败</li>
+<li>命令用错了，造成了找不到相应的网卡服务。</li>
+<li>ubuntu 尝试<code>service network-manager restart</code>成功恢复</li>
+</ol>
+<h3 id="vscode-利用官方的-cc插件格式化代码出错code-formater-unknown-key之类的报错提示">VSCode 利用官方的 C/C++插件格式化代码出错：<code>Code formater unknown key</code>之类的报错提示</h3>
+<ol type="1">
+<li>查阅 google 得知这是因为官方使用的插件的问题，其中用了<code>LLVM</code>的<code>clang-format</code>来格式化代码</li>
+<li>但是插件自带的<code>LLVM</code>版本太低，无法完美识别当前项目的自定义的<code>.clang-format</code>文件内容</li>
+<li>查看 VSCode 设置发现，VSCode 首先在指定的目录下寻找<code>LLVM</code>，否则在环境变量中寻找<code>LLVM</code>，否则用自带的<code>clang-format</code></li>
+<li>去官网下载最新的<code>LLVM</code>并加入系统变量中，重启 VSCode</li>
+</ol>
+<h3 id="build-mysql-并运行失败">build mysql 并运行失败</h3>
+<p>初次运行需要初始化数据库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--basedir=/home/cainot/Projects/AI4Scheduling/db/mysql8 --datadir=/home/cainot/Projects/AI4Scheduling/db/mysql8/data --initialize-insecure --user=root</span><br></pre></td></tr></table></figure>
+<p>注意，初始化数据库时<code>datadir</code>目录下应为空；</p>
+<p>初始化结束后删除初始化和与用户信息再次运行即可：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--basedir=/home/cainot/Projects/AI4Scheduling/db/mysql8</span><br><span class="line">--datadir=/home/cainot/Projects/AI4Scheduling/db/mysql8/data</span><br></pre></td></tr></table></figure>
+<h3 id="ant-下载需要配置代理">ANT 下载需要配置代理</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export ANT_OPTS="-Dhttp.proxyHost=http://devnet-proxy.oa.com -Dhttp.proxyPort=8080 -Dhttps.proxyHost=http://devnet-proxy.oa.com -Dhttps.proxyPort=8080"</span><br></pre></td></tr></table></figure>
+<p>记得需要 http 和 https 的代理</p>
+<h3 id="oltp-bench-tool-连接数据库出错">Oltp-Bench tool 连接数据库出错</h3>
+<p>数据库在编译调试的时候没有设置密码, 打开配置文件, 将</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">parameters</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Connection details --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dbtype</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">dbtype</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">driver</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">driver</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DBUrl</span>&gt;</span>jdbc:mysql://localhost:3306/tpcc<span class="tag">&lt;/<span class="name">DBUrl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">username</span>&gt;</span>root<span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>修改为:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">parameters</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Connection details --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dbtype</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">dbtype</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">driver</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">driver</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DBUrl</span>&gt;</span>jdbc:mysql://localhost:3306/tpcc?useSSL=false<span class="tag">&lt;/<span class="name">DBUrl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">username</span>&gt;</span>root<span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="gcc-g-c等工具版本太低">gcc g++ c++等工具版本太低</h3>
+<p>更新工具,ubuntu 下可以很方便的更新,但是<code>centos7</code>自带的版本太低了需要用<code>scl</code>来管理切换不通的版本. 问题来了, <code>scl enable xxxx bash</code>确实可以令当前的版本升级 但是 cmake 是按照<code>/usr/bin/gcc</code>之类的来找编译器,所以还是不顶用,但是可以添加全局变量来实现或者更好的方式是下面这种</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake .. -DWITH_BOOST=/data/test/mysql/mysql-8.0.19/boost/boost_1_70_0 -DWITH_DEBUG=1  -DCMAKE_C_COMPILER=/opt/rh/devtoolset-7/root/usr/bin/gcc -DCMAKE_CXX_COMPILER=/opt/rh/devtoolset-7/root/usr/bin/g++</span><br></pre></td></tr></table></figure>
+<p>利用 CMAKE 的参数来指定编译器路径.</p>
+<p>全局的方式示例:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CC=/opt/rh/devtoolset-2/root/usr/bin/gcc</span><br></pre></td></tr></table></figure>
+<h3 id="mysql-连接错误">mysql 连接错误</h3>
+<p>报错:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)</span><br></pre></td></tr></table></figure>
+<p>查看, 在 tmp 目录下确实不存在<code>mysql.sock</code>文件. 在运行<code>mysqld</code>时, 发现在里面有一条信息<code>socket: '/var/lib/mysql/mysql.sock'</code>, 于是建立软连接<code>ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock</code> 问题解决</p>
+<h3 id="oltp-bench-tool-使用教程">oltp-bench tool 使用教程</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">./oltpbenchmark -h</span><br><span class="line">usage: oltpbenchmark</span><br><span class="line"> -b,--bench &lt;arg&gt;               [required] Benchmark class. Currently</span><br><span class="line">                                supported: [tpcc, tpch, tatp, wikipedia,</span><br><span class="line">                                resourcestresser, twitter, epinions, ycsb,</span><br><span class="line">                                jpab, seats, auctionmark, chbenchmark,</span><br><span class="line">                                voter, linkbench, sibench, noop,</span><br><span class="line">                                smallbank, hyadapt]</span><br><span class="line"> -c,--config &lt;arg&gt;              [required] Workload configuration file</span><br><span class="line">    --clear &lt;arg&gt;               Clear all records in the database for this</span><br><span class="line">                                benchmark</span><br><span class="line">    --create &lt;arg&gt;              Initialize the database for this benchmark</span><br><span class="line"> -d,--directory &lt;arg&gt;           Base directory for the result files,</span><br><span class="line">                                default is current directory</span><br><span class="line">    --dialects-export &lt;arg&gt;     Export benchmark SQL to a dialects file</span><br><span class="line">    --execute &lt;arg&gt;             Execute the benchmark workload</span><br><span class="line"> -h,--help                      Print this help</span><br><span class="line">    --histograms                Print txn histograms</span><br><span class="line"> -im,--interval-monitor &lt;arg&gt;   Throughput Monitoring Interval in</span><br><span class="line">                                milliseconds</span><br><span class="line"> -jh,--json-histograms &lt;arg&gt;    Export histograms to JSON file</span><br><span class="line">    --load &lt;arg&gt;                Load data using the benchmark's data</span><br><span class="line">                                loader</span><br><span class="line"> -o,--output &lt;arg&gt;              Output file (default System.out)</span><br><span class="line">    --output-raw &lt;arg&gt;          Output raw data</span><br><span class="line">    --output-samples &lt;arg&gt;      Output sample data</span><br><span class="line">    --runscript &lt;arg&gt;           Run an SQL script</span><br><span class="line"> -s,--sample &lt;arg&gt;              Sampling window</span><br><span class="line"> -ss                            Verbose Sampling per Transaction</span><br><span class="line"> -t,--timestamp                 Each result file is prepended with a</span><br><span class="line">                                timestamp for the beginning of the</span><br><span class="line">                                experiment</span><br><span class="line"> -ts,--tracescript &lt;arg&gt;        Script of transactions to execute</span><br><span class="line">    --upload &lt;arg&gt;              Upload the result</span><br><span class="line">    --uploadHash &lt;arg&gt;          git hash to be associated with the upload</span><br><span class="line"> -v,--verbose                   Display Messages</span><br></pre></td></tr></table></figure>
+<h3 id="mysqld-启动失败">mysqld 启动失败</h3>
+<p>查看 mysqld 的日志信息, 一般在<code>/var/log</code>目录下的<code>mysqld</code>文件中</p>
+<h3 id="更新-git-gcc-等">更新 git gcc 等</h3>
+<p>tlinux2 使用<code>yum --enablerepo=tlinux-testing update git</code>可以升级 git 到 2.19 版本 gcc 升级指引：http://faq.tlinux.oa.com/2018/11/05/tlinux2-2%E9%80%9A%E8%BF%87yum%E5%AE%89%E8%A3%85gcc-7/</p>
+<h3 id="思考状态的定义">思考状态的定义</h3>
+<p>mysql 中有一个指令, 可以获取锁信息, 我们需要改变的就是这个: <code>show status like 'innodb_row_lock_%';</code></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/note/" rel="tag"># note</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/13/HexoConfigure/" rel="prev" title="HexoConfigure">
+      <i class="fa fa-chevron-left"></i> HexoConfigure
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#graduate-work"><span class="nav-number">1.</span> <span class="nav-text">Graduate Work</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#description"><span class="nav-number">1.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todo-list"><span class="nav-number">1.2.</span> <span class="nav-text">Todo List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#timeline"><span class="nav-number">1.3.</span> <span class="nav-text">Timeline</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-number">1.3.1.</span> <span class="nav-text">2020&#x2F;3&#x2F;25</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">2020&#x2F;3&#x2F;27</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#questions-and-answers"><span class="nav-number">1.4.</span> <span class="nav-text">Questions and Answers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无法-ping-通任何域名提示name-or-service-not-known"><span class="nav-number">1.4.1.</span> <span class="nav-text">无法 ping 通任何域名，提示Name or service not known；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vscode-利用官方的-cc插件格式化代码出错code-formater-unknown-key之类的报错提示"><span class="nav-number">1.4.2.</span> <span class="nav-text">VSCode 利用官方的 C&#x2F;C++插件格式化代码出错：Code formater unknown key之类的报错提示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#build-mysql-并运行失败"><span class="nav-number">1.4.3.</span> <span class="nav-text">build mysql 并运行失败</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ant-下载需要配置代理"><span class="nav-number">1.4.4.</span> <span class="nav-text">ANT 下载需要配置代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oltp-bench-tool-连接数据库出错"><span class="nav-number">1.4.5.</span> <span class="nav-text">Oltp-Bench tool 连接数据库出错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gcc-g-c等工具版本太低"><span class="nav-number">1.4.6.</span> <span class="nav-text">gcc g++ c++等工具版本太低</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql-连接错误"><span class="nav-number">1.4.7.</span> <span class="nav-text">mysql 连接错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oltp-bench-tool-使用教程"><span class="nav-number">1.4.8.</span> <span class="nav-text">oltp-bench tool 使用教程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysqld-启动失败"><span class="nav-number">1.4.9.</span> <span class="nav-text">mysqld 启动失败</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新-git-gcc-等"><span class="nav-number">1.4.10.</span> <span class="nav-text">更新 git gcc 等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思考状态的定义"><span class="nav-number">1.4.11.</span> <span class="nav-text">思考状态的定义</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Cai Not</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cai Not</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
